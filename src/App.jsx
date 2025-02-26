@@ -61,7 +61,7 @@ const App = () => {
 		setImageUrl(input);
 		// console.log(imageUrl);
 		console.log('input', input);
-		fetch('http://localhost:3000/imageurl', {
+		fetch(`${process.env.REACT_APP_API_URL}/imageurl`, {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
@@ -71,7 +71,7 @@ const App = () => {
 			.then((response) => response.json())
 			.then((result) => {
 				if (result) {
-					fetch('http://localhost:3000/image', {
+					fetch(`${process.env.REACT_APP_API_URL}/image`, {
 						method: 'put',
 						headers: { 'Content-Type': 'application/json' },
 						body: JSON.stringify({
