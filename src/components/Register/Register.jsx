@@ -15,9 +15,10 @@ const Register = ({ onRouteChange, loadUser }) => {
 	const onNameChange = (event) => {
 		setName(event.target.value);
 	};
+	const API_URL = process.env.REACT_APP_API_URL;
 
 	const onSubmitRegister = () => {
-		fetch(`${process.env.REACT_APP_API_URL}/register`, {
+		fetch(`${API_URL}/register`, {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
