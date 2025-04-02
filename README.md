@@ -1,6 +1,7 @@
 # Smart Brain App
 
 ## 📌 Overview
+
 Smart Brain is a web application that allows users to **detect faces in images** using the Clarifai API. Users can **register and log in** with credentials stored in a **PostgreSQL database**. The app also features a **ranking system** that tracks user activity.
 
 ## 🚀 Features
